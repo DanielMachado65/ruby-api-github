@@ -24,5 +24,9 @@ https://api.github.com/search/repositories?q=language:${params}&sort=stars&order
 ## Executar o projeto
 
 ```sh
+# criar o banco de dados
 rake db:create
+
+# migrar o banco de dados
+rake db:migrate
 ```

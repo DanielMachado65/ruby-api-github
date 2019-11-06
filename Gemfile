@@ -16,6 +16,9 @@ gem 'jbuilder', '~> 2.5'
 # For Debugging
 gem 'pry'
 
+# For request
+gem 'httparty'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
