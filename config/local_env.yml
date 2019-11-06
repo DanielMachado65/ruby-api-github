@@ -1,0 +1,8 @@
+LOCAL_DB_NAME: ebdb
+LOCAL_HOSTNAME: localhost
+LOCAL_PASSWORD: Ruacemia1123_
+LOCAL_PORT: 3306
+LOCAL_USERNAME: root
+
+DOMAIN: socialwave.com.br
+AMBIENTE: development
