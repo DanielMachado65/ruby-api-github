@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_132633) do
+ActiveRecord::Schema.define(version: 2019_11_06_173319) do
 
-  create_table "owners", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "owners", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "github_id"
     t.string "login"
     t.string "url"
     t.string "html_url"
     t.string "avatar_url"
-    t.string "type"
+    t.string "type_of_user"
     t.boolean "site_admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "repositories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "repositories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.bigint "owner_id"
     t.string "full_name"
     t.string "url"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_132633) do
     t.boolean "disabled"
     t.boolean "license"
     t.boolean "private"
-    t.text "description"
+    t.text "description", limit: 4294967295
     t.date "repository_date_create"
     t.date "repository_date_update"
     t.datetime "created_at", null: false

@@ -2,4 +2,8 @@
 
 class Repository < ApplicationRecord
   belongs_to :owner
+
+  scope :language, lambda { |language|
+    where('language LIKE CONCAT("%", ?, "%")', language)
+  }
 end

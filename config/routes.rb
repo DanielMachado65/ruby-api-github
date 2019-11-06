@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :github do
         resources :repositories, only: %i[index show]
+
+        get '/refresh', to: 'repositories#refresh_page'
       end
     end
   end

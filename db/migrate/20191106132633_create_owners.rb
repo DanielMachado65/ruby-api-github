@@ -7,7 +7,7 @@ class CreateOwners < ActiveRecord::Migration[5.2]
       t.string  :url
       t.string  :html_url
       t.string  :avatar_url
-      t.string  :type
+      t.string  :type_of_user
 
       t.boolean :site_admin
 

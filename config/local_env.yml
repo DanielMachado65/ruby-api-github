@@ -4,5 +4,9 @@ LOCAL_PASSWORD: Ruacemia1123_
 LOCAL_PORT: 3306
 LOCAL_USERNAME: root
 
+# development
 DOMAIN: socialwave.com.br
 AMBIENTE: development
+
+# Github
+GITHUB_MAIN_URL: https://api.github.com
