@@ -1,4 +1,12 @@
-# Pesquisas 
+# Ruby on Rails (_Api_) for Github
+
+> Api para consumir o endpoint de repositórios do github
+
+Para você conseguir visualizar da melhor maneira, há um arquivo no PostMan:
+
+- `link para importar`: https://www.getpostman.com/collections/5ee5a7a606db387f84fb
+
+## Pesquisas 
 
 - A aplicação deve importar e guardar em banco informações sobre repositórios com mais estrelas do GitHub na seguinte API: https://api.github.com/search/repositories;
   - A aplicação deverá possuir um endpoint público que liste os 5 repositórios com mais estrelas do GitHub em ordem decrescente.
