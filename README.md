@@ -6,6 +6,58 @@ Para você conseguir visualizar da melhor maneira, há um arquivo no PostMan:
 
 - `link para importar`: https://www.getpostman.com/collections/5ee5a7a606db387f84fb
 
+
+## Index
+
+### @request
+
+para esse request você pode utilizar da seguinte maneira
+
+> você pode fazer a requisição normal, que a mesma vai retornar com o limit ou também pode passar parametros
+
+você também pode mesclar os parametros.
+
+### @Params
+
+parametros que são suportados:
+
+- `language`: linguagem de programação
+
+```curl
+http://localhost:3001/api/v1/github/repositories?language=Python
+```
+ 
+- `order`: para ordernação de estrelas
+- `limit`: para ĺimitar a quantidade
+
+```curl
+http://localhost:3001/api/v1/github/repositories?order=desc&limit=1
+```
+
+## Refresh
+
+```curl
+http://localhost:3001/api/v1/github/refresh
+```
+
+> request for api	
+
+para dar atualizar o database
+
+## Show
+
+```curl
+http://localhost:3001/api/v1/github/repositories/1
+``` 
+
+### @request
+
+aqui você pode pesquisar por um reqpositorio em especifico
+
+
+
+------------
+
 ## Pesquisas 
 
 - A aplicação deve importar e guardar em banco informações sobre repositórios com mais estrelas do GitHub na seguinte API: https://api.github.com/search/repositories;
