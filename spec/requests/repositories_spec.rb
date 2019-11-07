@@ -81,4 +81,14 @@ RSpec.describe 'Repositories', type: :request do
       end
     end
   end
+
+  context 'GET /refresh' do
+    it 'refresh page application' do
+      get api_v1_github_refresh_path
+
+      info = JSON.parse response.body
+      expect(response).to have_http_status(200)
+      expect(info['data']).to eq 'atualizado com sucesso'
+    end
+  end
 end
