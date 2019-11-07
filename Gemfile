@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
+ruby '2.3.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -21,6 +21,9 @@ gem 'httparty'
 
 # serializer
 gem 'active_model_serializers'
+
+# deploy
+gem 'passenger'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
