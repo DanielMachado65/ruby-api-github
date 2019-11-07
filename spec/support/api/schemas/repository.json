@@ -1,0 +1,83 @@
+{
+  "id": "file:/repository.json#",
+  "type": "object",
+  "required": [
+    "id",
+    "github_id"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "git_url": {
+      "type": "string"
+    },
+    "repository_date_create": {
+      "type": "string"
+    },
+    "repository_date_update": {
+      "type": "string"
+    },
+    "stars_count": {
+      "type": "integer"
+    },
+    "forks_count": {
+      "type": "integer"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "github_id": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "github_id": {
+          "type": "integer"
+        },
+        "login": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "html_url": {
+          "type": "string"
+        },
+        "avatar_url": {
+          "type": "string"
+        },
+        "type_of_user": {
+          "type": "string"
+        },
+        "site_admin": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

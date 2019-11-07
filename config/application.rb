@@ -23,7 +23,7 @@ module RubyApiGithub
     config.load_defaults 5.2
 
     # add local_env.yml
-    if Rails.env.development?
+    if Rails.env.development? || Rails.env.test?
       config.before_configuration do
         env_file = File.join(Rails.root, 'config', 'local_env.yml')
         YAML.load(File.open(env_file)).each do |key, value|

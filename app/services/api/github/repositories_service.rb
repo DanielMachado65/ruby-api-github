@@ -8,13 +8,15 @@ module Api
       # @param [Object] params
       # essa foi a única parte que não ficou claro, se era para separar as querys
       def self.execute(params)
-        return Repository.order(stars_count: :desc).limit(5) if query_supported(params)
+        unless query_supported(params).present?
+          return Repository.order(stars_count: :desc).limit(5)
+        end
 
-        @repo = Repository.where(nil) # creates an anonymous scope
+        @repo = Repository.where(nil) # create empty scope
         @repo = @repo.language(params['language']) if params['language'].present?
         @repo = @repo.limit(params[:limit]) if params[:limit].present?
-
         @repo = @repo.order(stars_count: params[:order]) if params[:order].present?
+        @repo
       rescue ArgumentError
         @repo = []
       end
@@ -48,7 +50,7 @@ module Api
 
       class << self
         def query_supported(params)
-          params.permit(:language, :sort, :limit)
+          params.permit(:language, :order, :limit)
         end
       end
     end

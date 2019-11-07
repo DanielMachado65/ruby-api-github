@@ -7,7 +7,7 @@ class Api::V1::Github::RepositoriesController < ApplicationController
   # GET /api/v1/github/repositories?language=Ruby
   def index
     @repositories = Api::Github::RepositoriesService.execute(params)
-    return api_error('dado não encontrado, por favor atualize.') if @repositories.blank?
+    return api_not_found('dado não encontrado, por favor atualize.') if @repositories.blank?
 
     render json: @repositories, status: 200
   end
@@ -15,7 +15,7 @@ class Api::V1::Github::RepositoriesController < ApplicationController
   # GET /api/v1/github/repositories/1
   def show
     @repository = Repository.find_by(id: params[:id])
-    return api_error('não foi encontrado') if @repository.blank?
+    return api_not_found('não foi encontrado') if @repository.blank?
 
     render json: @repository, status: 200
   end

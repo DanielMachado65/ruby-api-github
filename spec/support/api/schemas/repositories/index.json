@@ -1,0 +1,21 @@
+{
+  "id": "file:/repositories/index.json#",
+  "type": "array",
+  "definitions": {
+    "repository": {
+      "description": "A collection of repository",
+      "type": "array",
+      "items": {
+        "$ref": "file:/repository.json#"
+      }
+    }
+  },
+  "required": [
+    "repository"
+  ],
+  "properties": {
+    "repository": {
+      "$ref": "#/definitions/repository"
+    }
+  }
+}
